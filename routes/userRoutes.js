@@ -3,8 +3,7 @@ const {
   getUser,
   createUser,
   updateUser,
-  deleteUser,
-  patchUser,
+  deleteUser
 } = require('../controllers/userController');
 
 const router = (req, res) => {
