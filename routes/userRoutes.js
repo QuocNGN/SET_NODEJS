@@ -3,18 +3,34 @@ const {
   getUser,
   createUser,
   updateUser,
-  deleteUser
+  deleteUser,
 } = require('../controllers/userController');
 
 const router = (req, res) => {
-  if (req.url === '/api/users' && req.method === 'GET') {
-    getUser(req, res);
-  } else if (req.url === '/api/users' && req.method === 'POST') {
-    createUser(req, res);
-  } else if (req.url === '/api/users' && req.method === 'PUT') {
-    updateUser(req, res);
-  } else if (req.url === '/api/users' && req.method === 'DELETE') {
-    deleteUser(req, res);
+  const { url, method } = req;
+  if (url === '/api/users') {
+    switch (method) {
+      case 'GET':
+        getUser(req, res);
+        break;
+      case 'POST':
+        createUser(req, res);
+        break;
+      case 'PUT':
+        updateUser(req, res);
+        break;
+      case 'DELETE':
+        deleteUser(req, res);
+        break;
+      default:
+        res.writeHead(405, { 'Content-Type': 'application/json' });
+        res.end(
+          JSON.stringify({
+            message: `Method ${method} not allowed on /api/users endpoint`,
+          })
+        );
+        break;
+    }
   } else {
     res.writeHead(404, { 'Content-Type': 'application/json' });
     res.end(
