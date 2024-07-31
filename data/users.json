@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Nguyen Van A",
+    "age": 20,
+    "address": "TP.HCM"
+  },
+  {
+    "id": 2,
+    "name": "Nguyen Thanh C",
+    "age": 52,
+    "address": "Ha Noi"
+  },
+  {
+    "id": 3,
+    "name": "Nguyen Thi B",
+    "age": 25,
+    "address": "Da Nang"
+  },
+  {
+    "id": 4,
+    "name": "Ho Van D",
+    "age": 36,
+    "address": "Vung Tau"
+  },
+  {
+    "id": 5,
+    "name": "Phan Van Q",
+    "age": 51,
+    "address": "Dong Thap"
+  }
+]
