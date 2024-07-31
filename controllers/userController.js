@@ -21,6 +21,5 @@ module.exports = {
   getUser,
   createUser,
   updateUser,
-  deleteUser,
-  patchUser,
+  deleteUser
 };
